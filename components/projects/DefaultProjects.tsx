@@ -36,8 +36,6 @@ export default function DefaultProjects({ data }: { data: ProjectsData }) {
   const galB = useRef<HTMLDivElement>(null);
   const galC = useRef<HTMLDivElement>(null);
 
-  const isLaptop = useMediaQuery({ query: "(max-width: 1300px)" });
-  const isAlmostMobile = useMediaQuery({ query: "(max-width: 1100px)" });
   const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
   const isPhone = useMediaQuery({ query: "(max-width: 480px)" });
 
@@ -70,13 +68,9 @@ export default function DefaultProjects({ data }: { data: ProjectsData }) {
     /// TLDR: Needed for react cleanup
     let ctx = gsap.context(() => {
       gsap.to(galA.current, {
-        xPercent: isMobile
-          ? -465
-          : isAlmostMobile
-            ? -220
-            : isLaptop
-              ? -170
-              : -80,
+        translateX: isMobile
+          ? -galA.current.offsetWidth - 1270
+          : -galA.current.offsetWidth - 700,
         ease: "expo.out",
         scrollTrigger: {
           trigger: root.current,
@@ -88,13 +82,9 @@ export default function DefaultProjects({ data }: { data: ProjectsData }) {
         },
       });
       gsap.to(galB.current, {
-        xPercent: isMobile
-          ? -625
-          : isAlmostMobile
-            ? -320
-            : isLaptop
-              ? -235
-              : -110,
+        translateX: isMobile
+          ? -galB.current.offsetWidth - 1700
+          : -galB.current.offsetWidth - 1500,
         ease: "expo.out",
         scrollTrigger: {
           trigger: root.current,
@@ -106,13 +96,9 @@ export default function DefaultProjects({ data }: { data: ProjectsData }) {
         },
       });
       gsap.to(galC.current, {
-        xPercent: isMobile
-          ? -360
-          : isAlmostMobile
-            ? -180
-            : isLaptop
-              ? -140
-              : -60,
+        translateX: isMobile
+          ? -galC.current.offsetWidth - 900
+          : -galC.current.offsetWidth - 400,
         ease: "expo.out",
         scrollTrigger: {
           trigger: root.current,
@@ -126,6 +112,10 @@ export default function DefaultProjects({ data }: { data: ProjectsData }) {
     }, root);
     return () => ctx.revert(); // cleanup
     // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  useEffect(() => {
+    console.log(galA.current.offsetWidth);
   }, []);
 
   return (
