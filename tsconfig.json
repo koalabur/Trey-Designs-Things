@@ -16,8 +16,15 @@
     "incremental": true,
     "paths": {
       "@/*": ["./src/*"]
-    }
+    },
+    "strictNullChecks": false
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "src/pages/sitemap.xml.js", "src/pages/sitemap.xml.js"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "src/pages/sitemap.xml.js",
+    "src/pages/sitemap.xml.js"
+  ],
   "exclude": ["node_modules"]
 }

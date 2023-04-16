@@ -109,12 +109,13 @@
     &--active {
       position: fixed;
       width: 100%;
-      background: $white;
+      background: rgba(255, 255, 255, 0.7);
       z-index: 9;
       justify-content: center;
       top: 0;
       left: 0;
       padding: 2px 0;
+      backdrop-filter: blur(7px);
     }
 
     &-item {

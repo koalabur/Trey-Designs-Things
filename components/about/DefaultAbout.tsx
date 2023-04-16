@@ -14,13 +14,14 @@ import { AboutData } from "../../shared/interfaces";
 import { useMediaQuery } from "react-responsive";
 
 // Import Swiper React components
-import { Scrollbar, Pagination } from "swiper";
+import { Scrollbar, Pagination, Navigation } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
 import "swiper/scss";
 import "swiper/scss/scrollbar";
 import "swiper/scss/pagination";
+import "swiper/css/navigation";
 
 // Styles
 import styles from "@/styles/components/about/DefaultAbout.module.scss";
@@ -50,7 +51,8 @@ export default function DefaultAbout({ data }: { data: AboutData }) {
         <div className={styles["about__divider-line"]}></div>
       </div>
       <Swiper
-        modules={[Scrollbar, Pagination]}
+        modules={[Scrollbar, Pagination, Navigation]}
+        navigation={true}
         spaceBetween={isMobile ? 25 : 80}
         slidesPerView={isPhone ? 1 : isMobile ? 2 : 4}
         grabCursor={true}

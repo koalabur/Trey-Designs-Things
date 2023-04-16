@@ -19,3 +19,31 @@ html {
 .swiper-scrollbar-drag {
   background: $blue !important;
 }
+
+.swiper-button-next,
+.swiper-button-prev {
+  position: relative !important;
+  left: 0 !important;
+  right: 0 !important;
+  cursor: pointer !important;
+  z-index: 11 !important;
+  top: 0 !important;
+  bottom: 0 !important;
+  padding: 9px 20px !important;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 16px !important;
+}
+
+.swiper-button-prev {
+  top: 22px !important;
+  color: $gray !important;
+  background: #efefef !important;
+}
+.swiper-button-next {
+  margin-left: 40px;
+  background: $blue !important;
+  color: $white !important;
+}
