@@ -1,12 +1,6 @@
 ## What's Going On?
 
 ![alt text](https://lh4.googleusercontent.com/Ii4fCi3e4TtyyQIW22XtYmG369dECs0oheOuKDdsmvrNMDDKQJ5zQwm3l7g9twToVSo=w2400 "Next 13") [Next 13](https://nextjs.org/)
-- SSR: Server Side Rendering for SEO
-- API calls on the server allowing pages to be statically generated with all of the content necessary
-- Context API: Share global state between components
-- [React Intersection Observer](https://www.npmjs.com/package/react-intersection-observer): Highlight nav links when section is in view then send to context API
-
-![alt text](https://lh3.googleusercontent.com/bCipOytyPoWekjujlT9Ads6VuqGibsela9QsUyZGCizo7A3LG0P6wg_KwAhHYtb0f1s=w2400 "Chromatic") [Chromatic Storybook](https://www.chromatic.com/)
 
 ![alt text](https://lh6.googleusercontent.com/aNQxUtMEztBjZePrAkL7KPWSXJazMGwnxMDXazxDO4BNh-4aw6YwkvtZGm-oR07mih8=w2400 "GSAP") [GSAP](https://greensock.com/)
 
