@@ -18,7 +18,8 @@ export default function BasicGallery({ gallery }: { gallery: GalleryData[] }) {
           alt={image.title}
           width={image.width}
           height={image.height}
-          loading="lazy"
+          placeholder="blur"
+          blurDataURL={image.url}
         />
       ))}
     </>
