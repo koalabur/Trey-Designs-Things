@@ -32,9 +32,9 @@ import styles from "@/styles/components/projects/DefaultProjects.module.scss";
 
 export default function DefaultProjects({ data }: { data: ProjectsData }) {
   const root = useRef<HTMLDivElement | Element | null>(null);
-  const galA = useRef<HTMLDivElement | HTMLElement>(null);
-  const galB = useRef<HTMLDivElement | HTMLElement>(null);
-  const galC = useRef<HTMLDivElement | HTMLElement>(null);
+  const galA = useRef<HTMLDivElement>(null);
+  const galB = useRef<HTMLDivElement>(null);
+  const galC = useRef<HTMLDivElement>(null);
 
   const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
   const isPhone = useMediaQuery({ query: "(max-width: 480px)" });
