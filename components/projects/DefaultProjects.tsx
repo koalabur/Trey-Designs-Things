@@ -73,7 +73,7 @@ export default function DefaultProjects({ data }: { data: ProjectsData }) {
 
   return (
     <section ref={root} className={styles.projects} id="Work">
-      <h1 className={styles.projects__title}>{data.title}</h1>
+      <h2 className={styles.projects__title}>{data.title}</h2>
       <div className={styles.projects__row} ref={galA}>
         <BasicGallery gallery={data.galleryACollection.items} />
       </div>

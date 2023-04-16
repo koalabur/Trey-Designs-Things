@@ -21,14 +21,33 @@ export default function SPA({
   aboutData: AboutData;
   projectsData: ProjectsData;
 }) {
+  function addProductJsonLd() {
+    return {
+      __html: `{
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "author": {
+          "@type": "Person",
+          "givenName": "Trey",
+          "familyName": "Cepeda",
+        }
+      }`,
+    };
+  }
   return (
     <>
       <Head>
         <title>Trey Designs Things</title>
         <meta
           name="description"
-          content="A multi-disciplinary graphic designer with spanning work in marketing, branding, UI design, and advertising. I enjoy working on new concepts that push the envelope of visual storytelling through thoughtful design."
+          content="A multi-disciplinary graphic designer working in marketing, branding, UI design, and advertising. I enjoy working on concepts that push the envelope."
         />
+        <meta property="og:title" content="Trey Designs Things" />
+        <meta
+          property="og:description"
+          content="A multi-disciplinary graphic designer working in marketing, branding, UI design, and advertising. I enjoy working on concepts that push the envelope."
+        />
+        <meta property="og:image" content="/spa-ogimg.jpg" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link
           rel="apple-touch-icon"
@@ -51,6 +70,11 @@ export default function SPA({
         <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
         <meta name="msapplication-TileColor" content="#fdfdfd" />
         <meta name="theme-color" content="#fdfdfd" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={addProductJsonLd()}
+          key="product-jsonld"
+        />
       </Head>
       <Intro data={introData} />
       <About data={aboutData} />
