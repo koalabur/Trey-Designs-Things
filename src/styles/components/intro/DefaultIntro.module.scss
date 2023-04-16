@@ -1,0 +1,198 @@
+.intro {
+  display: flex;
+  flex-direction: row;
+  gap: #{fluid(40px, 70px)};
+  @include std-max-width;
+  @include edge-padding;
+  margin-top: #{fluid(140px, 182px)};
+  margin-bottom: #{fluid(80px, 125px)};
+
+  @include mobile {
+    flex-direction: column;
+    margin-top: #{fluid(70px, 140px)};
+  }
+
+  &__content {
+    padding-top: 15px;
+
+    @include mobile {
+      order: 2;
+    }
+
+    &-body {
+      font-family: $main-font;
+      color: $gray;
+      font-weight: 400;
+      font-size: #{fluid(14px, 16px)};
+    }
+
+    &-title {
+      font-family: $main-font;
+      color: $blue;
+      font-weight: 400;
+      @include std-title-fs;
+      margin-bottom: #{fluid(25px, 44px)};
+    }
+  }
+
+  &__images {
+    position: relative;
+    display: flex;
+
+    @include mobile {
+      order: 1;
+      justify-content: center;
+    }
+
+    &-circle {
+      background: $blue;
+      width: #{fluid(425px, 460px)};
+      height: #{fluid(425px, 460px)};
+      border-radius: 100%;
+
+      @include mobile {
+        width: #{fluid(300px, 425px)};
+        height: #{fluid(300px, 425px)};
+      }
+    }
+
+    &-main {
+      position: absolute;
+      bottom: 0;
+      right: -10px;
+
+      @include mobile {
+        max-width: #{fluid(300px, 400px)};
+        height: auto;
+        right: auto;
+        margin-right: -10px;
+      }
+    }
+
+    &-other {
+      position: absolute;
+      bottom: -75px;
+      left: -75px;
+      -webkit-animation: wobble-other 4s infinite both;
+      animation: wobble-other 4s infinite both;
+
+      @include mobile {
+        max-width: #{fluid(160px, 250px)};
+        height: auto;
+        left: auto;
+        margin-left: -220px;
+        bottom: -60px;
+      }
+    }
+
+    &-secondary {
+      top: 30px;
+      position: absolute;
+      -webkit-animation: wobble-secondary 4s 1s infinite both;
+      animation: wobble-secondary 4s 1s infinite both;
+
+      @include mobile {
+        max-width: #{fluid(100px, 160px)};
+        height: auto;
+        left: auto;
+        margin-left: -200px;
+      }
+    }
+  }
+}
+
+@-webkit-keyframes wobble-secondary {
+  0%,
+  100% {
+    -webkit-transform: translateX(0%);
+    transform: translateX(0%);
+    -webkit-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+  }
+  15% {
+    -webkit-transform: translateX(-30px) rotate(-6deg);
+    transform: translateX(-30px) rotate(-6deg);
+  }
+  25% {
+    -webkit-transform: translateX(15px) rotate(6deg);
+    transform: translateX(15px) rotate(6deg);
+  }
+  40% {
+    -webkit-transform: translateX(0%);
+    transform: translateX(0%);
+    -webkit-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+  }
+}
+
+@keyframes wobble-secondary {
+  0%,
+  100% {
+    -webkit-transform: translateX(0%);
+    transform: translateX(0%);
+    -webkit-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+  }
+  15% {
+    -webkit-transform: translateX(-30px) rotate(-6deg);
+    transform: translateX(-30px) rotate(-6deg);
+  }
+  25% {
+    -webkit-transform: translateX(15px) rotate(6deg);
+    transform: translateX(15px) rotate(6deg);
+  }
+  40% {
+    -webkit-transform: translateX(0%);
+    transform: translateX(0%);
+    -webkit-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+  }
+}
+
+@-webkit-keyframes wobble-other {
+  0%,
+  100% {
+    -webkit-transform: translateX(0%);
+    transform: translateX(0%);
+    -webkit-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+  }
+  15% {
+    -webkit-transform: translateX(-30px) rotate(6deg);
+    transform: translateX(-30px) rotate(6deg);
+  }
+  25% {
+    -webkit-transform: translateX(15px) rotate(-6deg);
+    transform: translateX(15px) rotate(-6deg);
+  }
+  40% {
+    -webkit-transform: translateX(0%);
+    transform: translateX(0%);
+    -webkit-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+  }
+}
+
+@keyframes wobble-other {
+  0%,
+  100% {
+    -webkit-transform: translateX(0%);
+    transform: translateX(0%);
+    -webkit-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+  }
+  15% {
+    -webkit-transform: translateX(-30px) rotate(6deg);
+    transform: translateX(-30px) rotate(6deg);
+  }
+  25% {
+    -webkit-transform: translateX(15px) rotate(-6deg);
+    transform: translateX(15px) rotate(-6deg);
+  }
+  40% {
+    -webkit-transform: translateX(0%);
+    transform: translateX(0%);
+    -webkit-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+  }
+}

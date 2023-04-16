@@ -1,0 +1,170 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  align-items: center;
+  @include std-max-width;
+  @include edge-padding;
+  padding-top: 10px;
+  padding-bottom: 40px;
+  margin-top: #{fluid(50px, 115px)};
+
+  &__copyright {
+    font-family: $main-font;
+    color: $light-gray;
+    font-size: #{fluid(12px, 15px)};
+  }
+
+  &__logo {
+    width: #{fluid(86px, 115px)};
+    height: auto;
+  }
+
+  &__row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    align-items: flex-end;
+    margin-bottom: #{fluid(40px, 110px)};
+
+    @include mobile {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &-col {
+      display: flex;
+      flex-direction: column;
+
+      @include mobile {
+        margin-bottom: 30px;
+      }
+
+      &:last-child {
+        @include mobile {
+          margin-bottom: 0;
+        }
+      }
+
+      &-link {
+        font-family: $main-font;
+        font-size: #{fluid(16px, 20px)};
+        color: $black;
+
+        @include mobile {
+          text-align: center;
+        }
+      }
+
+      &--socials {
+        flex-direction: row;
+        gap: #{fluid(20px, 60px)};
+      }
+
+      &-title {
+        font-family: $main-font;
+        @include std-title-fs;
+        font-weight: 400;
+        color: $blue;
+        margin-bottom: #{fluid(15px, 25px)};
+
+        @include mobile {
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+
+.nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  max-width: #{fluid(800px, 1200px)};
+  margin-left: auto;
+  margin-right: auto;
+  @include edge-padding;
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+  @include mobile {
+    flex-direction: column;
+    gap: 5px;
+    justify-content: center;
+  }
+
+  &__links {
+    display: flex;
+    gap: #{fluid(40px, 70px)};
+
+    @include mobile {
+      order: 3;
+      justify-content: center;
+      gap: 15px;
+      width: 100%;
+    }
+
+    &--active {
+      position: fixed;
+      width: 100%;
+      background: $white;
+      z-index: 9;
+      justify-content: center;
+      top: 0;
+      left: 0;
+      padding: 2px 0;
+    }
+
+    &-item {
+      font-size: #{fluid(13px, 17px)};
+      font-family: $main-font;
+      font-weight: 400;
+      text-decoration: none;
+      color: $black;
+      padding: 7px;
+
+      &--active {
+        text-decoration: underline;
+      }
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__logo {
+    width: #{fluid(91px, 120px)};
+    height: auto;
+
+    @include mobile {
+      order: 2;
+    }
+  }
+
+  &__socials {
+    display: flex;
+    flex-direction: row;
+    gap: #{fluid(10px, 12px)};
+
+    @include mobile {
+      order: 1;
+    }
+
+    &-link {
+      padding: 5px;
+      border-bottom: 1px solid transparent;
+
+      &:hover {
+        border-color: $black;
+      }
+
+      &-item {
+        width: #{fluid(20px, 30px)};
+        height: #{fluid(20px, 30px)};
+      }
+    }
+  }
+}
