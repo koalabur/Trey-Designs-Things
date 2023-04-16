@@ -5,6 +5,9 @@ import localFont from "next/font/local";
 // React
 import React from "react";
 
+// GA
+import { GoogleAnalytics } from "nextjs-google-analytics";
+
 // Context
 import { AppContextProvider } from "../../context/AppContext";
 
@@ -39,6 +42,7 @@ const disketMono = localFont({
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <div className={disketMono.variable}>
+      <GoogleAnalytics trackPageViews />
       <AppContextProvider>
         <DefaultLayout>
           <Component {...pageProps} />
