@@ -20,6 +20,7 @@ export default function BasicGallery({ gallery }: { gallery: GalleryData[] }) {
           height={image.height}
           placeholder="blur"
           blurDataURL={image.url}
+          loading="eager"
         />
       ))}
     </>

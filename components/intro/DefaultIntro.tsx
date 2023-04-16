@@ -24,6 +24,7 @@ export default function DefaultLayout({ data }: { data: IntroData }) {
           height={484}
           placeholder="blur"
           blurDataURL={data.mainImage.url}
+          loading="eager"
         />
         <Image
           className={styles["intro__images-secondary"]}
