@@ -19,5 +19,8 @@
 }
 
 @mixin std-section-spacing {
-  margin-bottom: #{fluid(100px, 200px)};
+  margin-bottom: 550px;
+  @media (max-width: 1600px) {
+    margin-bottom: #{fluid(115px, 400px)};
+  }
 }
