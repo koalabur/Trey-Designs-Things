@@ -1,27 +1,13 @@
 .projects {
-  margin-bottom: 22rem;
+  @include std-section-spacing;
 
   @include mobile {
     @include edge-padding;
-    height: calc(100% + 15px);
     margin-left: 0;
   }
 
-  &__notice {
-    font-family: $main-font;
-    font-size: #{fluid(16px, 18px)};
-    color: $black;
-    margin-left: #{fluid(0px, 300px)};
-    font-weight: 400;
-    margin-bottom: #{fluid(40px, 90px)};
-  }
-
   &__row {
-    display: flex;
-    flex-direction: row;
-    gap: #{fluid(40px, 50px)};
     margin-bottom: #{fluid(30px, 50px)};
-    overflow-x: visible;
     padding-left: 15px;
 
     &:last-child {
@@ -39,12 +25,12 @@
     color: $blue;
     margin-left: #{fluid(0px, 300px)};
     font-weight: 400;
+    margin-bottom: #{fluid(40px, 90px)};
 
     @include mobile {
       @include edge-padding;
       height: calc(100% + 15px);
       margin-left: 0;
-      margin-bottom: #{fluid(40px, 90px)};
     }
   }
 }

@@ -1,8 +1,7 @@
 .about {
   margin-left: #{fluid(0px, 300px)};
-  margin-bottom: 25rem;
-  padding-top: 15rem;
-
+  @include std-section-spacing;
+  
   @include mobile {
     @include edge-padding;
     height: calc(100% + 15px);

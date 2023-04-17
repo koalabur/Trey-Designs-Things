@@ -10,16 +10,15 @@ import { AppContext } from "../../context/AppContext";
 // Types
 import { AboutData } from "../../shared/interfaces";
 
-// Import media query
+// React-responsive
 import { useMediaQuery } from "react-responsive";
 
 // Import Swiper React components
-import { Scrollbar, Pagination, Navigation } from "swiper";
+import { Pagination, Navigation } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
 import "swiper/scss";
-import "swiper/scss/scrollbar";
 import "swiper/scss/pagination";
 import "swiper/css/navigation";
 
@@ -27,9 +26,6 @@ import "swiper/css/navigation";
 import styles from "@/styles/components/about/DefaultAbout.module.scss";
 
 export default function DefaultAbout({ data }: { data: AboutData }) {
-  const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
-  const isPhone = useMediaQuery({ query: "(max-width: 480px)" });
-
   // When section enters viewport
   const { ref: about, inView: aboutIsVisible } = useInView({
     threshold: 0.4,
@@ -43,6 +39,9 @@ export default function DefaultAbout({ data }: { data: AboutData }) {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [aboutIsVisible]);
 
+  const isLaptop = useMediaQuery({ query: "(max-width: 1024px)" });
+  const isPhone = useMediaQuery({ query: "(max-width: 480px)" });
+
   return (
     <section className={styles.about} id="What-I-Do" ref={about}>
       <h2 className={styles["about__title"]}>{data.title}</h2>
@@ -51,10 +50,10 @@ export default function DefaultAbout({ data }: { data: AboutData }) {
         <div className={styles["about__divider-line"]}></div>
       </div>
       <Swiper
-        modules={[Scrollbar, Pagination, Navigation]}
+        modules={[Pagination, Navigation]}
         navigation={true}
-        spaceBetween={isMobile ? 25 : 80}
-        slidesPerView={isPhone ? 1 : isMobile ? 2 : 4}
+        slidesPerView={isPhone ? 1 : isLaptop ? 2 : 4}
+        spaceBetween={80}
         grabCursor={true}
         pagination={true}
         className={styles["about__content"]}
