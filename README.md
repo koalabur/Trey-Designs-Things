@@ -2,7 +2,7 @@
 
 ![alt text](https://lh4.googleusercontent.com/Ii4fCi3e4TtyyQIW22XtYmG369dECs0oheOuKDdsmvrNMDDKQJ5zQwm3l7g9twToVSo=w2400 "Next 13") [Next 13](https://nextjs.org/)
 
-![alt text](https://lh6.googleusercontent.com/aNQxUtMEztBjZePrAkL7KPWSXJazMGwnxMDXazxDO4BNh-4aw6YwkvtZGm-oR07mih8=w2400 "GSAP") [GSAP](https://greensock.com/)
+![alt text](https://lh3.googleusercontent.com/drive-viewer/AAOQEOQ6j-Ntfi7CdvputMkmZ5DtCwL9MHxrgyU5jSjT96cr_5WXnrjB5kPDpKzVGLMnjtEAzgMr9RkTeBPU1BIdsjDjaCAvLw=s2560 "Swiperjs") [Swiperjs](https://swiperjs.com/)
 
 ![alt text](https://lh6.googleusercontent.com/FU5h_Q0As38kMoqvxtWEmzK10JkainV6PdkepauYdChfg4V_vFi4qpqc-hQnAch1PsU=w2400 "Contentful") [Contentful](https://www.contentful.com/)
 
