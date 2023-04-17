@@ -17,3 +17,7 @@
 @mixin std-title-fs {
   font-size: #{fluid(34px, 52px)};
 }
+
+@mixin std-section-spacing {
+  margin-bottom: #{fluid(100px, 200px)};
+}

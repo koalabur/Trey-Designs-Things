@@ -1,9 +1,13 @@
 .gallery {
-  width: auto;
-  height: 354px;
-  border-radius: 24px;
+  width: auto !important;
 
-  @include mobile {
-    height: 200px;
+  &__item {
+    width: auto;
+    height: 354px;
+    border-radius: 24px;   
+
+    @include mobile {
+      height: 200px;
+    }
   }
 }

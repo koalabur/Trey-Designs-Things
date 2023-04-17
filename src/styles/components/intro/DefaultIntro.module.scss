@@ -5,7 +5,7 @@
   @include std-max-width;
   @include edge-padding;
   margin-top: #{fluid(140px, 182px)};
-  margin-bottom: #{fluid(80px, 125px)};
+  @include std-section-spacing;
 
   @include mobile {
     flex-direction: column;
@@ -80,7 +80,7 @@
         max-width: #{fluid(160px, 250px)};
         height: auto;
         left: auto;
-        margin-left: -220px;
+        margin-left: -160px;
         bottom: -60px;
       }
     }
@@ -95,7 +95,7 @@
         max-width: #{fluid(100px, 160px)};
         height: auto;
         left: auto;
-        margin-left: -200px;
+        margin-left: -180px;
       }
     }
   }

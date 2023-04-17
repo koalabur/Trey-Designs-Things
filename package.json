@@ -15,7 +15,6 @@
     "@types/react-dom": "18.0.11",
     "eslint": "8.38.0",
     "eslint-config-next": "13.3.0",
-    "gsap": "^3.11.5",
     "next": "13.3.0",
     "next-sitemap": "^4.0.7",
     "nextjs-google-analytics": "^2.3.3",

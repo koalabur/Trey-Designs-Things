@@ -32,6 +32,9 @@ export default function DefaultLayout({ data }: { data: IntroData }) {
           alt={data.secondaryImage.title}
           width={180}
           height={180}
+          placeholder="blur"
+          blurDataURL={data.mainImage.url}
+          loading="eager"
         />
         <Image
           className={styles["intro__images-other"]}
@@ -39,6 +42,9 @@ export default function DefaultLayout({ data }: { data: IntroData }) {
           alt={data.otherImage.title}
           width={262}
           height={306}
+          placeholder="blur"
+          blurDataURL={data.mainImage.url}
+          loading="eager"
         />
       </div>
     </section>
